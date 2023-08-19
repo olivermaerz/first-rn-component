@@ -1,6 +1,6 @@
 import {View, Text} from 'react-native';
 
-export default function LittleLemonFooter() {
+const LittleLemonFooter = () => {
   return (
     <View style={{flex: 0.15, backgroundColor: '#F4CE14'}}>
       <Text
@@ -14,4 +14,6 @@ export default function LittleLemonFooter() {
       </Text>
     </View>
   );
-}
+};
+
+export default LittleLemonFooter;
