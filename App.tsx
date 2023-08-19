@@ -10,7 +10,7 @@ import {View, Text} from 'react-native';
 import LittleLemonHeader from './components/LittleLemonHeader';
 import LittleLemonFooter from './components/LittleLemonFooter';
 
-function App(): JSX.Element {
+function App() {
   return (
     <View
       style={{
