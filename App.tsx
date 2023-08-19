@@ -1,7 +1,15 @@
-import { View } from 'react-native';
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ *
+ * @format
+ */
+
+import React from 'react';
+import {View} from 'react-native';
 import LittleLemonHeader from './components/LittleLemonHeader';
 
-export default function App() {
+function App(): JSX.Element {
   return (
     <View
       style={{
@@ -12,3 +20,5 @@ export default function App() {
     </View>
   );
 }
+
+export default App;
