@@ -8,6 +8,7 @@
 import React from 'react';
 import {View} from 'react-native';
 import LittleLemonHeader from './components/LittleLemonHeader';
+import LittleLemonFooter from './components/LittleLemonFooter';
 
 function App(): JSX.Element {
   return (
@@ -17,6 +18,7 @@ function App(): JSX.Element {
         backgroundColor: '#495E57',
       }}>
       <LittleLemonHeader />
+      <LittleLemonFooter />
     </View>
   );
 }
