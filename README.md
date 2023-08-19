@@ -3,19 +3,17 @@ App 'first-rn-component' from Coursera React Native course updated and ready to 
 ### For Android
 
 ```bash
-# using npm
-npm run android
+# using npx
+npx react-native run-android
 
-# OR using Yarn
-yarn android
 ```
 
 ### For iOS
 
 ```bash
-# using npm
-npm run ios
+# using npx
+npx react-native run-ios
 
-# OR using Yarn
-yarn ios
+# OR to specify the device or simulator 
+npx react-native run-ios --simulator="iPhone 13"
 ```
