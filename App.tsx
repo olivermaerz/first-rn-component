@@ -6,7 +6,7 @@
  */
 
 import React from 'react';
-import {View} from 'react-native';
+import {View, Text} from 'react-native';
 import LittleLemonHeader from './components/LittleLemonHeader';
 import LittleLemonFooter from './components/LittleLemonFooter';
 
@@ -18,6 +18,11 @@ function App(): JSX.Element {
         backgroundColor: '#495E57',
       }}>
       <LittleLemonHeader />
+      <View
+        style={{
+          flex: 1,
+        }}>
+      </View>
       <LittleLemonFooter />
     </View>
   );
