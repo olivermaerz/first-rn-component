@@ -15,6 +15,18 @@ const WelcomeScreen = () => {
         }}>
         Welcome to Little Lemon
       </Text>
+      <Text
+        style={{
+          paddingLeft: 20,
+          paddingRight: 20,
+          paddingBottom: 10,
+          color: '#ffffff',
+          fontSize: 12,
+        }}>
+        Little Lemon is a charming neighborhood bistro that serves simple food
+        and classic cocktails in a lively but casual environment. We would love
+        to hear more about your experience with us!
+      </Text>
     </View>
   );
 };
