@@ -1,9 +1,9 @@
-import { StyleSheet, Text, View } from "react-native";
 import React from 'react';
+import {StyleSheet, Text, View} from 'react-native';
 
 const welcomeStyles = StyleSheet.create({
   container: {
-    flex: 0.5,
+    flex: 0.3,
   },
   title: {
     padding: 20,

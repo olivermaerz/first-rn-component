@@ -1,3 +1,4 @@
+import React from 'react';
 import {View, Text, StyleSheet, FlatList} from 'react-native';
 
 const green: string = '#495E57';
@@ -40,14 +41,13 @@ const menuStyles = StyleSheet.create({
     fontSize: 20,
     paddingHorizontal: 5,
     color: yellow,
-    //flex: 0.5,
   },
 });
 
 const Item = ({name, price}: {name: string; price: string}) => (
   <View style={menuStyles.innerContainer}>
-    <Text style={menuStyles.text}>{name}</Text><Text style={menuStyles.text}>{price}</Text>
-
+    <Text style={menuStyles.text}>{name}</Text>
+    <Text style={menuStyles.text}>{price}</Text>
   </View>
 );
 

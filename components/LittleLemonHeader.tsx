@@ -1,8 +1,9 @@
-import { View, Text, StyleSheet } from "react-native";
+import React from 'react';
+import {View, Text, StyleSheet} from 'react-native';
 
 const headerStyles = StyleSheet.create({
   container: {
-    flex: 0.15,
+    flex: 0.2,
     backgroundColor: '#F4CE14',
   },
   text: {
@@ -16,10 +17,7 @@ const headerStyles = StyleSheet.create({
 const LittleLemonHeader = () => {
   return (
     <View style={headerStyles.container}>
-      <Text
-        style={headerStyles.text}>
-        Little Lemon
-      </Text>
+      <Text style={headerStyles.text}>Little Lemon</Text>
     </View>
   );
 };
