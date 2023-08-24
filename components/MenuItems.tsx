@@ -2,29 +2,28 @@ import {View, Text, StyleSheet, FlatList} from 'react-native';
 
 const green: string = '#495E57';
 const yellow: string = '#F4CE14';
-const menuItemsToDisplay: {name: string; id: string}[] = [
-  {name: 'Hummus', id: '1A'},
-  {name: 'Moutabal', id: '2B'},
-  {name: 'Falafel', id: '3C'},
-  {name: 'Marinated Olives', id: '4D'},
-  {name: 'Kofta', id: '5E'},
-  {name: 'Eggplant Salad', id: '6F'},
-  {name: 'Lentil Burger', id: '7G'},
-  {name: 'Smoked Salmon', id: '8H'},
-  {name: 'Kofta Burger', id: '9I'},
-  {name: 'Turkish Kebab', id: '10J'},
-  {name: 'Fries', id: '11K'},
-  {name: 'Buttered Rice', id: '12L'},
-  {name: 'Bread Sticks', id: '13M'},
-  {name: 'Pita Pocket', id: '14N'},
-  {name: 'Lentil Soup', id: '15O'},
-  {name: 'Greek Salad', id: '16Q'},
-  {name: 'Rice Pilaf', id: '17R'},
-  {name: 'Baklava', id: '18S'},
-  {name: 'Tartufo', id: '19T'},
-  {name: 'Tartufo', id: '20U'},
-  {name: 'Tiramisu', id: '21V'},
-  {name: 'Panna Cotta', id: '22W'},
+const menuItemsToDisplay: {name: string; price: string; id: string}[] = [
+  {name: 'Hummus', price: '$5.00', id: '1A'},
+  {name: 'Moutabal', price: '$5.00', id: '2B'},
+  {name: 'Falafel', price: '$7.50', id: '3C'},
+  {name: 'Marinated Olives', price: '$5.00', id: '4D'},
+  {name: 'Kofta', price: '$5.00', id: '5E'},
+  {name: 'Eggplant Salad', price: '$8.50', id: '6F'},
+  {name: 'Lentil Burger', price: '$10.00', id: '7G'},
+  {name: 'Smoked Salmon', price: '$14.00', id: '8H'},
+  {name: 'Kofta Burger', price: '$11.00', id: '9I'},
+  {name: 'Turkish Kebab', price: '$15.50', id: '10J'},
+  {name: 'Fries', price: '$3.00', id: '11K'},
+  {name: 'Buttered Rice', price: '$3.00', id: '12L'},
+  {name: 'Bread Sticks', price: '$3.00', id: '13M'},
+  {name: 'Pita Pocket', price: '$3.00', id: '14N'},
+  {name: 'Lentil Soup', price: '$3.75', id: '15O'},
+  {name: 'Greek Salad', price: '$6.00', id: '16Q'},
+  {name: 'Rice Pilaf', price: '$4.00', id: '17R'},
+  {name: 'Baklava', price: '$3.00', id: '18S'},
+  {name: 'Tartufo', price: '$3.00', id: '19T'},
+  {name: 'Tiramisu', price: '$5.00', id: '20U'},
+  {name: 'Panna Cotta', price: '$5.00', id: '21V'},
 ];
 
 const menuStyles = StyleSheet.create({
@@ -34,24 +33,30 @@ const menuStyles = StyleSheet.create({
   innerContainer: {
     paddingLeft: 10,
     backgroundColor: green,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
   },
   text: {
     fontSize: 20,
-    paddingBottom: 5,
+    paddingHorizontal: 5,
     color: yellow,
+    //flex: 0.5,
   },
 });
 
-const Item = ({name}: {name: string}) => (
+const Item = ({name, price}: {name: string; price: string}) => (
   <View style={menuStyles.innerContainer}>
-    <Text style={menuStyles.text}>{name}</Text>
+    <Text style={menuStyles.text}>{name}</Text><Text style={menuStyles.text}>{price}</Text>
+
   </View>
 );
 
 const MenuItems = () => {
-  const renderItem = ({item}: {item: {name: string; id: string}}) => (
-    <Item name={item.name} />
-  );
+  const renderItem = ({
+    item,
+  }: {
+    item: {name: string; price: string; id: string};
+  }) => <Item name={item.name} price={item.price} />;
   return (
     <View style={menuStyles.container}>
       <Text style={menuStyles.text}>View Menu: </Text>
